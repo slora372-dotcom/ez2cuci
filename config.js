@@ -28,6 +28,8 @@ window.SITE = {
     gameTips: "https://ppg668.cam/register.php?r=BMMTH",
     luckyNumber: "https://ppg668.cam/register.php?r=BMMTH",
     games: "https://ppg668.cam/register.php?r=BMMTH",
+    androidApp: "https://ppg668.cam/register.php?r=BMMTH",
+    iosApp: "https://ppg668.cam/register.php?r=BMMTH",
     telegram: "https://t.me/EZ2CUCI",
   },
 
