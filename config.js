@@ -4,8 +4,9 @@
 window.SITE = {
   brand: {
     name: "EZ2CUCI",
-    logo: "assets/logo.gif",
-    partner: "assets/partner.png",
+    logo: "assets/still/logo.png",
+    logoAnim: "assets/logo.gif",
+    partner: "assets/partner-sm.png",
   },
 
   currency: "RM",
@@ -37,14 +38,14 @@ window.SITE = {
   referralUrl: "https://ppg668.cam/register.php?r=BMMTH",
 
   banners: [
-    "assets/banners/banner-1.png",
-    "assets/banners/banner-2.png",
-    "assets/banners/banner-3.png",
-    "assets/banners/banner-4.png",
-    "assets/banners/banner-5.png",
-    "assets/banners/banner-6.png",
+    "assets/banners/banner-1.jpg",
+    "assets/banners/banner-2.jpg",
+    "assets/banners/banner-3.jpg",
+    "assets/banners/banner-4.jpg",
+    "assets/banners/banner-5.jpg",
+    "assets/banners/banner-6.jpg",
     "assets/banners/banner-7.gif",
-    "assets/banners/banner-8.png",
+    "assets/banners/banner-8.jpg",
   ],
 
   categories: [

@@ -7,15 +7,16 @@
   const link = (key) => esc(S.links[key] || "#");
 
   // ---------- Brand ----------
-  $("logo").innerHTML = `<img src="${esc(S.brand.logo)}" alt="${esc(S.brand.name)}">`;
-  $("partner").innerHTML = img(S.brand.partner, `${S.brand.name} Partnership`);
+  // Logo and badge sit at the top of the page, so they load straight away.
+  $("logo").innerHTML = `<img src="${esc(S.brand.logo)}" data-anim="${esc(S.brand.logoAnim)}" alt="${esc(S.brand.name)}" width="320" height="80">`;
+  $("partner").innerHTML = `<img src="${esc(S.brand.partner)}" alt="${esc(S.brand.name)} Partnership" width="200" height="100">`;
   $("copyright").textContent = S.copyright;
 
   // ---------- Carousel ----------
   const track = $("carouselTrack");
   const dots = $("carouselDots");
   track.innerHTML = S.banners.map((src, i) =>
-    `<a class="slide" href="${link("register")}"><img src="${esc(src)}" alt="Promosi ${esc(S.brand.name)} ${i + 1}"${i ? ' loading="lazy"' : ""}></a>`
+    `<a class="slide" href="${link("register")}"><img src="${esc(src)}" alt="Promosi ${esc(S.brand.name)} ${i + 1}"${i ? ' loading="lazy"' : ' fetchpriority="high"'}></a>`
   ).join("");
   dots.innerHTML = S.banners.map((_, i) => `<button aria-label="Slide ${i + 1}"></button>`).join("");
 
