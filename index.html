@@ -28,7 +28,9 @@
     </header>
 
     <section class="carousel" aria-label="Promosi">
-      <div class="carousel-track" id="carouselTrack"></div>
+      <!-- First banner is written here (not only by script.js) so it appears
+           with the first paint and the page below it never jumps. -->
+      <div class="carousel-track" id="carouselTrack"><a class="slide" href="https://ppg668.cam/register.php?r=BMMTH"><img src="assets/banners/banner-1.jpg" alt="Promosi EZ2CUCI 1" width="1000" height="500" fetchpriority="high"></a></div>
       <div class="carousel-dots" id="carouselDots"></div>
     </section>
 
@@ -42,9 +44,9 @@
       <div class="wallet">
         <div class="wallet-info">
           <p class="wallet-label">Baki:</p>
-          <p class="wallet-amount" id="balance"></p>
-          <p>Deposit Minimum: <b id="minDeposit"></b></p>
-          <p>Withdraw Minimum: <b id="minWithdrawal"></b></p>
+          <p class="wallet-amount" id="balance">RM0.00</p>
+          <p>Deposit Minimum: <b id="minDeposit">RM10.00</b></p>
+          <p>Withdraw Minimum: <b id="minWithdrawal">RM50.00</b></p>
         </div>
         <div class="wallet-actions">
           <a class="img-btn" data-link="deposit"><img src="assets/still/btn-deposit.png" data-anim="assets/btn-deposit.gif" alt="Deposit" width="300" height="83"></a>
