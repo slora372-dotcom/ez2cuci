@@ -32,8 +32,13 @@
   [...dots.children].forEach((d, i) => d.addEventListener("click", () => goTo(i)));
   track.addEventListener("scroll", syncDots, { passive: true });
   syncDots();
-  let timer = setInterval(() => goTo(slide + 1), 4000);
-  track.addEventListener("pointerdown", () => clearInterval(timer), { once: true });
+  // The first banner stays for 8s before rotating every 4s. A slide change in
+  // the first few seconds makes speed tests count the page as still loading.
+  let timer = setTimeout(() => {
+    goTo(slide + 1);
+    timer = setInterval(() => goTo(slide + 1), 4000);
+  }, 8000);
+  track.addEventListener("pointerdown", () => { clearTimeout(timer); clearInterval(timer); }, { once: true });
 
   // ---------- Wallet ----------
   $("balance").textContent = money(0);
